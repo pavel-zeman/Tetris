@@ -96,10 +96,11 @@ class PieceInstance {
         for (let i = 0; i < this.grid.length; i++) {
             for (let j = 0; j < this.grid[i].length; j++) {
                 if (this.grid[i][j] && this.y + i >= 0) {
-                    context.fillStyle = this.piece.getBorderColor();;
-                    context.fillRect((this.x + j) * elementSize, (this.y + i) * elementSize, elementSize, elementSize);
-                    context.fillStyle = this.piece.getColor();
+                    context.clearRect((this.x + j) * elementSize, (this.y + i) * elementSize, elementSize, elementSize);
+                    context.fillStyle = this.piece.getBorderColor();
                     context.fillRect((this.x + j) * elementSize + 1, (this.y + i) * elementSize + 1, elementSize - 2, elementSize - 2);
+                    context.fillStyle = this.piece.getColor();
+                    context.fillRect((this.x + j) * elementSize + 2, (this.y + i) * elementSize + 2, elementSize - 4, elementSize - 4);
                 }
             }
         }

@@ -248,7 +248,7 @@ class Game {
         pieces = [];
         pieces.push(new Piece([15],   "#00FFFF", "#008888", 0));
         pieces.push(new Piece([7, 4], "#0088FF", "#006688", 1));
-        pieces.push(new Piece([7, 1], "#FF8000", "#FFAA00", 2));
+        pieces.push(new Piece([7, 1], "#FF8000", "#CC7700", 2));
         pieces.push(new Piece([3, 3], "#DDAA00", "#AA7700", 3));
         pieces.push(new Piece([6, 3], "#00FF00", "#009900", 4));
         pieces.push(new Piece([7, 2], "#FF00FF", "#770077", 5));

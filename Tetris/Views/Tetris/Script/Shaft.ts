@@ -145,10 +145,11 @@ class Shaft {
                 this.canvasContext.clearRect(j * elementSize, i * elementSize, elementSize, elementSize);
                 if (this.content[i][j]) {
                     let pieceId = this.content[i][j] - 1;
+                    this.canvasContext.clearRect(j * elementSize, i * elementSize, elementSize, elementSize);
                     this.canvasContext.fillStyle = pieces[pieceId].getBorderColor();
-                    this.canvasContext.fillRect(j * elementSize, i * elementSize, elementSize, elementSize);
-                    this.canvasContext.fillStyle = pieces[pieceId].getColor();
                     this.canvasContext.fillRect(j * elementSize + 1, i * elementSize + 1, elementSize - 2, elementSize - 2);
+                    this.canvasContext.fillStyle = pieces[pieceId].getColor();
+                    this.canvasContext.fillRect(j * elementSize + 2, i * elementSize + 2, elementSize - 4, elementSize - 4);
                 }
             }
         }
