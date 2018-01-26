@@ -173,6 +173,10 @@ class Shaft {
                         this.content[j][k] = this.content[j - 1][k];
                     }
                 }
+                // Clear the first row
+                for (let k = 0; k < this.width; k++) {
+                    this.content[0][k] = 0;
+                }
                 i++;
                 rowsRemoved++;
             }
